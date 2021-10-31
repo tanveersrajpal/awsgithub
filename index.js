@@ -1,7 +1,7 @@
 const http = require('http');
-
-const server = http.createServer((request, response) => {
-    response.writeHead(200, {"Content-Type": "text/plain"});
+const app = express();
+app.get("/", function (req, res) {
+    res.sendFile(__dirname + "/index.html");
     
 });
 
