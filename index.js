@@ -1,7 +1,8 @@
 const http = require('http');
-app.get("/", function (req, res) {
-    res.sendFile(__dirname + "/index.html");
-    
+
+const server = http.createServer((request, response) => {
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.end("Hello World!");
 });
 
 const port = process.env.PORT || 1337;
